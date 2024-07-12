@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <!-- <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="body-background">
+    <div class="background" id="background"></div>
+    <div id="particles-js" style="position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1;"></div> 
+
+    <div class="contenedorCronometro">
+        <h1>Contador para la Elefantita</h1>
+
+        <div class="contenedor">
+            <div class="contador dias">
+                <p class="texto" id="dias">00</p>
+                <span>Dias</span>
+            </div>
+            <span class="separacion">:</span>
+            <div class="contador horas">
+                <p class="texto" id="horas">00</p>
+                <span>Horas</span>
+            </div>
+            <span class="separacion">:</span>
+            <div class="contador minutos">
+                <p class="texto" id="minutos">00</p>
+                <span>Minutos</span>
+            </div>
+            <span class="separacion">:</span>
+            <div class="contador segundos">
+                <p class="texto" id="segundos">00</p>
+                <span>Segundos</span>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="src/script.js"></script>
+</body>
+
+</html>

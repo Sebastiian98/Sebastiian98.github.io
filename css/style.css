@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #9e569e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: rgb(10, 10, 10);
+}
+
+h1 {
+    font-size: 2rem; /* Reducción del tamaño para todos los dispositivos */
+    margin: 10px 0;
+    text-align: center;
+}
+.body-background {
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out;
+}
+h1{
+    color: white; /* Color del texto */
+    -webkit-text-stroke: 2px rgb(255, 0, 191); /* Borde negro para los números, ajusta el color como necesario */
+    text-shadow: 12px 2px 4px rgba(209, 12, 160, 0.5); /* Sombra para el texto */
+}
+/*
+.contenedorCronometro {
+    background-color: rgba(217, 43, 223, 0.76);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%; 
+    max-width: 500px; 
+}
+*/
+.contenedorCronometro {
+    background-color: rgba(217, 43, 223, 0.76);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 95%; /* Aumenta el ancho para mejor ajuste */
+    max-width: 600px; /* Aumenta el máximo ancho para dispositivos más grandes */
+    margin: 20px auto; /* Asegura que esté centrado y tenga margen desde el top */
+}
+
+
+
+
+
+/* .contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-wrap: nowrap;
+    width: 100%; 
+} 
+*/
+
+.contenedor{
+    display: flex;
+    justify-content: space-around; /* Asegura distribución uniforme */
+    align-items: center; /* Alinea verticalmente los elementos */
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+
+.contador {
+    flex: 1 1 60px; /* Ajuste del tamaño base */
+    margin: 5px;
+    text-align: center;
+    
+}
+
+.texto {
+    font-weight: bold;
+    font-size: 3.5rem;
+    line-height: 1;
+    margin: 0;
+    color: white; /* Color del texto */
+    -webkit-text-stroke: 2px rgb(255, 0, 191); /* Borde negro para los números, ajusta el color como necesario */
+    text-shadow: 12px 2px 4px rgba(209, 12, 160, 0.5); /* Sombra para el texto */
+}
+
+
+.contador span {
+    font-size: 1rem; /* Reducción del tamaño de las etiquetas */
+    text-shadow: 4px 10px 4px rgba(209, 12, 160, 0.5); /* Sombra para el texto */
+    color: white;
+    -webkit-text-stroke: 1px rgb(255, 0, 191);
+
+}
+
+.separacion{
+    font-size: 5rem; /* Aumenta el tamaño de los ':' */
+    color: #ae00ff; /* Cambia el color si es necesario */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Añade sombra para mejor visibilidad */
+    margin: 0 10px; /* Añade margen entre los números y los ':' */
+    margin-bottom: 30px;
+}
+
+/* Media Queries para pantallas más grandes */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .texto {
+        font-size: 5rem;
+    }
+
+    .contador span {
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 600px) {
+    .texto {
+        font-size: 3rem; /* Reducción para dispositivos más pequeños */
+    }
+
+    .separacion {
+        font-size: 3.5rem; /* Ajuste para mantener la proporción */
+    }
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Asegura que el fondo no interfiera con otros contenidos */
+    transition: background-image 1s ease-in-out; /* Suaviza la transición de fondo */
+}
+
+@keyframes flutter {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+.butterfly {
+    position: absolute;
+    animation: flutter 4s infinite;
+    /* Añade más propiedades como background-image, width, height, etc. */
+}
+  
