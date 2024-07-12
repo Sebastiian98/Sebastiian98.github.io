@@ -42,12 +42,12 @@ h1{
 */
 .contenedorCronometro {
     background-color: rgba(217, 43, 223, 0.76);
-    padding: 15px;
+    padding: 10px;
     border-radius: 10px;
     text-align: center;
-    width: 95%; /* Aumenta el ancho para mejor ajuste */
-    max-width: 600px; /* Aumenta el máximo ancho para dispositivos más grandes */
-    margin: 20px auto; /* Asegura que esté centrado y tenga margen desde el top */
+    width: 90%; /* Aumenta el ancho para mejor ajuste */
+    max-width: 500px; /* Aumenta el máximo ancho para dispositivos más grandes */
+    margin: auto; /* Asegura que esté centrado y tenga margen desde el top */
 }
 
 
@@ -81,7 +81,7 @@ h1{
 
 .texto {
     font-weight: bold;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     line-height: 1;
     margin: 0;
     color: white; /* Color del texto */
@@ -91,6 +91,7 @@ h1{
 
 
 .contador span {
+    margin: 5px 10px;
     font-size: 1rem; /* Reducción del tamaño de las etiquetas */
     text-shadow: 4px 10px 4px rgba(209, 12, 160, 0.5); /* Sombra para el texto */
     color: white;
@@ -99,11 +100,11 @@ h1{
 }
 
 .separacion{
-    font-size: 5rem; /* Aumenta el tamaño de los ':' */
+    font-size: 3rem; /* Aumenta el tamaño de los ':' */
     color: #ae00ff; /* Cambia el color si es necesario */
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Añade sombra para mejor visibilidad */
-    margin: 0 10px; /* Añade margen entre los números y los ':' */
     margin-bottom: 30px;
+    padding: 0 5px;
 }
 
 /* Media Queries para pantallas más grandes */
@@ -120,13 +121,19 @@ h1{
         font-size: 1.5rem;
     }
 }
-@media (max-width: 600px) {
+@media (max-width: 480px) {
+    .contenedorCronometro {
+        width: 100%; /* Puede que necesites más espacio en pantallas muy pequeñas */
+        padding: 5px;
+    }
+
     .texto {
-        font-size: 3rem; /* Reducción para dispositivos más pequeños */
+        font-size: 2rem; /* Texto más pequeño para dispositivos pequeños */
     }
 
     .separacion {
-        font-size: 3.5rem; /* Ajuste para mantener la proporción */
+        font-size: 2.5rem;
+        padding: 0 3px;
     }
 }
 
